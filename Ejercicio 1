@@ -1,1 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KP Bootstrap Webpage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary left-0 vertical-nav sticky-top">
+        <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Users</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Settings</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-5 pt-5">
+
+        <!-- Dashboard Cards -->
+        <h2 class="text-center text-primary mb-4">Dashboard Overview</h2>
+        <div class="row">
+
+            <div class="col-md-4">
+                <div class="card shadow-sm text-center p-3 bg-light ">
+                    <i class="fa-solid fa-users fa-2x"></i>
+                    <h5 class="card-title">Total Users</h5>
+                    <p class="card-text text-warning display-6">580</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm text-center p-3 bg-light ">
+                    <i class="fa-solid fa-user-check fa-2x"></i>
+                    <h5 class="card-title">Active Users</h5>
+                    <p class="card-text text-success display-6">74</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm text-center p-3 bg-light ">
+                    <i class="fa-solid fa-clock fa-2x"></i>
+                    <h5 class="card-title ">Pending Approvals</h5>
+                    <p class="card-text text-info display-6">18</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- User Registration Form -->
+    <div class="container mt-5">
+        <h2 class="text-center text-primary mb-4">Add a New User</h2>
+        <form class="row g-3 needs-validation" novalidate>
+            <div class="col-md-4">
+                <label for="validationCustom01" class="form-label">Full name</label>
+                <input type="text" class="form-control" id="validationCustom01" value="Karolyn Paulino" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <label for="validationCustom02" class="form-label">Email</label>
+                <input type="email" class="form-control" id="validationCustom02" value="karolyn_paulino@example.com"
+                    required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <label for="validationCustom04" class="form-label">Rol selection</label>
+                <select class="form-select" id="validationCustom04" required>
+                    <option selected disabled value="">Admin</option>
+                    <option>User</option>
+                    <option>Guest</option>
+                </select>
+                <div class="invalid-feedback">
+                    Please select a valid role.
+                </div>
+            </div>
+
+            <button class="btn btn-primary w-100">Add User</button>
+        </form>
+    </div>
+
+    <!-- User Table -->
+    <div class="container mt-5">
+        <h2 class="text-center text-primary mb-4">User List</h2>
+        <searchbar class="mb-3">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search users..." aria-label="Search users"
+                    aria-describedby="button-search">
+                <button class="btn btn-outline-secondary" type="button" id="button-search"><i
+                        class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </searchbar>
+        
+            <table class="table striped table-hover border">
+                <thead class="table-light">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Full Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Rol</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider" bg-color="white">
+                    <tr class="table-active">
+                        <th scope="row">1</th>
+                        <td>Karolyn Paulino</td>
+                        <td>karolyn_paulino@gmail.com</td>
+                        <td>Admin</td>
+                        <td class="text-success">Active</td>
+                    </tr>
+                    <tr class="table-active">
+                        <th scope="row">2</th>
+                        <td>Juan Pérez</td>
+                        <td>juan_perez@gmail.com</td>
+                        <td>User</td>
+                        <td class="text-danger">Inactive</td>
+                    </tr>
+                    <tr class="table-active">
+                        <th scope="row">3</th>
+                        <td>Cristina López</td>
+                        <td>cristina_lopez@gmail.com</td>
+                        <td>User</td>
+                        <td class="text-danger">Inactive</td>
+                    </tr>
+                    <tr class="table-active">
+                        <th scope="row">4</th>
+                        <td>Francesca García</td>
+                        <td>francesca_garcia@gmail.com</td>
+                        <td>User</td>
+                        <td class="text-success">Active</td>
+                    </tr>
+                    <tr class="table-active">
+                        <th scope="row">5</th>
+                        <td>María Rodríguez</td>
+                        <td>maria_rodriguez@gmail.com</td>
+                        <td>User</td>
+                        <td class="text-success">Active</td>
+                    </tr>
+                    <tr class="table-active">
+                        <th scope="row">6</th>
+                        <td>Pedro Martínez</td>
+                        <td>pedro_martinez@gmail.com</td>
+                        <td>User</td>
+                        <td class="text-danger">Inactive</td>
+                    </tr>
+                    <tr class="table-active">
+                        <th scope="row">7</th>
+                        <td>Lucía Gómez</td>
+                        <td>lucia_gomez@gmail.com</td>
+                        <td>User</td>
+                        <td class="text-success">Active</td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+</body>
+
+</html>
