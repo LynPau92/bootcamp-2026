@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agencia de viajes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body style="background: black no-repeat center center fixed; background-size: cover; Width: 100%; height: 100vh;">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary"
+        style="position: sticky; top: 0; min-height: 50px; z-index: 1050;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Home</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="servicios.html">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="acercade.html">Acerca de</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="formulario.html">Formulario</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-2">
+        <h1 style="color: white; font-family: 'Segoe UI', cursive; text-align: center;">Formulario de registro
+        </h1>
+        <hr style="color: aqua;">
+        <div class="row">
+            <div class="col-lg-6 py-1">
+                <h3 style="color: white; text-align: center">Registra tus datos: </h3>
+                <br>
+                <form>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label" style="color: white;" required>Nombre
+                            completo *
+                        </label>
+                        <input type="text" class="form-control" id="nombre" placeholder="Ej: Karolyn Paulino">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label" style="color: white" required>Número
+                            de contacto: *
+                        </label>
+                        <input type="tel" class="form-control" placeholder="Ej: 809-123-4567" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label" style="color: white;" required>Email
+                            address*
+                        </label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1"
+                            placeholder="Ej: kp@gmail.com" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleSelect" class="form-label" style="color: white;" required>Selecciona una
+                            opción*
+                        </label>
+                        <select class="form-select" id="exampleSelect" required>
+                            <option selected disabled>Elige un servicio...</option>
+
+                            <optgroup label="Hoteles">
+                                <option value="Hotel 1">Hotel 1</option>
+                                <option value="Hotel 2">Hotel 2</option>
+                                <option value="Hotel 3">hotel 3</option>
+                                <option value="Hotel 4">Hotel 4</option>
+                            </optgroup>
+
+                            <optgroup label="Tours Santo Domingo">
+                                <option value="Tour 1">Tour 1</option>
+                                <option value="Tour 2">Tour 2</option>
+                                <option value="Tour 3">Tour 3</option>
+                                <option value="Tour 4">Tour 4</option>
+                            </optgroup>
+
+                            <optgroup label="Paquetes nacionales">
+                                <option value="Paquete 1">Paquete 1</option>
+                                <option value="Paquete 2">Paquete 2</option>
+                                <option value="Paquete 3">Paquete 3</option>
+                                <option value="Paquete 4">Paquete 4</option>
+                            </optgroup>
+
+                            <optgroup label="Viajes internacionales">
+                                <option value="Viaje 1">Viaje 1</option>
+                                <option value="Viaje 2">Viaje 2</option>
+                                <option value="Viaje 3">Viaje 3</option>
+                                <option value="Viaje 4">Viaje 4</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label" style="color: white">Cantidad de
+                            adultos: *
+                        </label>
+                        <input type="number" class="form-control" placeholder="1" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label" style="color: white">Cantidad de
+                            niños (menores de 12 años):
+                        </label>
+                        <input type="number" class="form-control" placeholder="0">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label" style="color: white" required>Fecha
+                            de salida: *
+                        </label>
+                        <input type="date" class="form-control" placeholder="1" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label" style="color: white">Fecha de
+                            regreso:
+                        </label>
+                        <input type="date" class="form-control" placeholder="1">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label" style="color: white">Seleccione una
+                            opción: *</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
+                            <label class="form-check-label" for="radioDefault1" style="color: white">
+                                Paquetes grupales
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2" checked>
+                            <label class="form-check-label" for="radioDefault2" style="color: white">
+                                Paquetes individuales
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label" style="color: white">Déjanos un
+                            mensaje:
+                        </label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Escribe tu mensaje aquí..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+
+                </form>
+            </div>
+            <div class="col-lg-6 py-5">
+                <img src="images/bg.jpg" alt="Playa" style="width: 100%; height: 100%;">
+            </div>
+        </div>
+    </main>
+
+    <script src="https://getbootstrap.com/docs/5.3/dist/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm">
+    </script>
+</body>
+
+<footer>
+    <div class="container text-center mt-5">
+        <p style="color: white; width: 100%;">&copy; 2026 Lyn´s Travel. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+</html>
